@@ -1,6 +1,7 @@
 # ember-metrics-pendo
 
 [![CircleCI](https://circleci.com/gh/peopledoc/ember-metrics-pendo.svg?style=shield&circle-token=f894568aeb359b29b17340bda3b4a12121531ae2)](https://circleci.com/gh/peopledoc/ember-metrics-pendo)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-metrics-pendo.svg)](https://emberobserver.com/addons/ember-metrics-pendo) 
 
 ## About this addon
 
