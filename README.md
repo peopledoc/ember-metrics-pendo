@@ -1,7 +1,7 @@
 # ember-metrics-pendo
 
 [![CircleCI](https://circleci.com/gh/peopledoc/ember-metrics-pendo.svg?style=shield&circle-token=f894568aeb359b29b17340bda3b4a12121531ae2)](https://circleci.com/gh/peopledoc/ember-metrics-pendo)
-[![Ember Observer Score](https://emberobserver.com/badges/ember-metrics-pendo.svg)](https://emberobserver.com/addons/ember-metrics-pendo) 
+[![Ember Observer Score](https://emberobserver.com/badges/ember-metrics-pendo.svg)](https://emberobserver.com/addons/ember-metrics-pendo)
 
 ## About this addon
 
@@ -17,8 +17,9 @@ Ember-metrics-pendo allows to configure the [Pendo](https://www.pendo.io) servic
 
 ## Compatibility
 
-- Ember.js v2.18 or above
+- Ember.js v3.4 or above
 - Ember CLI v2.13 or above
+- Node.js v8 or above
 
 ## Installation
 
