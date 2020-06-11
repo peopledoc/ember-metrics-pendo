@@ -1,7 +1,5 @@
 import { assign } from "@ember/polyfills";
 import { assert } from "@ember/debug";
-import $ from "jquery";
-import { get } from "@ember/object";
 import canUseDOM from "ember-metrics/utils/can-use-dom";
 import BaseAdapter from "ember-metrics/metrics-adapters/base";
 
@@ -11,7 +9,7 @@ export default BaseAdapter.extend({
   },
 
   init() {
-    let config = assign({}, get(this, "config"));
+    let config = assign({}, this.config);
     let { apiKey } = config;
 
     assert(
@@ -38,7 +36,7 @@ export default BaseAdapter.extend({
 
   willDestroy() {
     if (canUseDOM) {
-      $('script[src*="pendo.js"]').remove();
+      document.querySelector('script[src*="pendo.js"]').remove();
       delete window.pendo;
     }
   }
