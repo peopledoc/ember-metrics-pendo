@@ -1,7 +1,7 @@
 {
   "name": "ember-metrics-pendo",
   "version": "1.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An ember-metrics integration for Pendo.",
   "keywords": [
     "ember-addon"
   ],
