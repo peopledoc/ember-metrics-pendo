@@ -57,23 +57,23 @@ jobs:
           name: Run Tests
           command: yarn ember try:one ember-default --skip-cleanup=true
 
-  test_lts_3_4:
+  test_lts_3_12:
     <<: *defaults
     steps:
       - attach_workspace:
           at: .
       - run:
-          name: Run Tests Ember LTS 3.4
-          command: yarn ember try:one ember-lts-3.4 --skip-cleanup=true
+          name: Run Tests Ember LTS 3.12
+          command: yarn ember try:one ember-lts-3.12 --skip-cleanup=true
 
-  test_lts_3_8:
+  test_lts_3_16:
     <<: *defaults
     steps:
       - attach_workspace:
           at: .
       - run:
-          name: Run Tests Ember LTS 3.8
-          command: yarn ember try:one ember-lts-3.8 --skip-cleanup=true
+          name: Run Tests Ember LTS 3.16
+          command: yarn ember try:one ember-lts-3.16 --skip-cleanup=true
 
   test_release:
     <<: *defaults
@@ -125,10 +125,10 @@ workflows:
       - test:
           requires:
             - install_dependencies
-      - test_lts_3_4:
+      - test_lts_3_12:
           requires:
             - install_dependencies
-      - test_lts_3_8:
+      - test_lts_3_16:
           requires:
             - install_dependencies
       - test_release:
