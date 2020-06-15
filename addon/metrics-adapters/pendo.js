@@ -36,6 +36,14 @@ export default BaseAdapter.extend({
     }
   },
 
+  trackEvent(options = {}) {
+    const { event } = options;
+    delete options.event;
+    if (canUseDOM) {
+      window.pendo.track(event, options);
+    }
+  },
+
   willDestroy() {
     if (canUseDOM) {
       $('script[src*="pendo.js"]').remove();
