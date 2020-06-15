@@ -1,10 +1,20 @@
-'use strict';
+"use strict";
 
-const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+const EmberAddon = require("ember-cli/lib/broccoli/ember-addon");
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
-    // Add options here
+    // This fixes a test failure that began appearing after upgrading
+    // ember-auto-import, which stopped automatically enabling webpack
+    // polyfills in v1.4.0. See the URLs below for more details:
+    // https://github.com/ef4/ember-auto-import#i-upgraded-my-ember-auto-import-version-and-now-things-dont-import-what-changed
+    autoImport: {
+      webpack: {
+        node: {
+          global: true,
+        },
+      },
+    },
   });
 
   /*
