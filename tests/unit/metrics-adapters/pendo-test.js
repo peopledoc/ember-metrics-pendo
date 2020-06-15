@@ -46,4 +46,24 @@ module("Unit | Metrics Adapter | pendo adapter", function(hooks) {
       "it sends the correct arguments"
     );
   });
+  test("#trackEvent calls `pendo.track` with the right arguments", function(assert) {
+    let adapter = Pendo.create({ config });
+    window.pendo.track = () => {}; // doesn't have a track method unless it's a real api key etc
+    let stub = sandbox.stub(window.pendo, "track").callsFake(() => {
+      return true;
+    });
+    adapter.trackEvent({
+      event: 'ClickedThing',
+      prop1: 'ThingID',
+      prop2: 'ThingValue'
+    });
+    assert.ok(
+      stub.calledWith('ClickedThing', {
+        prop1: 'ThingID',
+        prop2: 'ThingValue'
+      }),
+      "it sends the correct arguments"
+    );
+  });
+
 });
