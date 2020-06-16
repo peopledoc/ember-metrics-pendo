@@ -1,5 +1,4 @@
-ember-metrics-pendo
-==============================================================================
+# ember-metrics-pendo
 
 [![CircleCI](https://circleci.com/gh/peopledoc/ember-metrics-pendo.svg?style=shield&circle-token=f894568aeb359b29b17340bda3b4a12121531ae2)](https://circleci.com/gh/peopledoc/ember-metrics-pendo)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-metrics-pendo.svg)](https://emberobserver.com/addons/ember-metrics-pendo)
@@ -16,16 +15,14 @@ Ember-metrics-pendo allows to configure the [Pendo](https://www.pendo.io) servic
 
 [ember-metrics](https://github.com/poteto/ember-metrics) is an Ember addon that provides bundled adapters for analytics services (like Google Analytics), and one API to track events, page views, and more. Pendo is not included by default in ember-metrics.
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
 * Ember.js v3.12 or above
 * Ember CLI v2.13 or above
 * Node.js v10 or above
 
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install ember-metrics-pendo
@@ -53,11 +50,25 @@ module.exports = function(environment) {
 
 The **apiKey** is the key associated with the Pendo account. Owning such a key is required to configure ember-metrics-pendo.
 
-Usage
-------------------------------------------------------------------------------
-
+## Usage
 
 Be aware the use of Pendo makes sense only once your visitor is identified in your application, as the purpose of the product is to provide analytics and user feedback.
+
+### API
+
+#### Service API
+
+There are 2 methods implemented by the Pendo adapter:
+
+- `identify([analyticsName], options)`
+
+  For analytics services that have identification functionality.
+
+- `trackEvent([analyticsName], options)`
+
+  This is a general purpose method for tracking a named event in your application.
+
+### Activate Pendo
 
 To activate Pendo, you should call the `identify` function provided by the `metrics` service. To do so, your app should contains the following code:
 
@@ -124,13 +135,10 @@ export default Route.extend({
 
 In this example, `visitorId` and `accountId` are data coming from some `user` payload.
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
-
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
