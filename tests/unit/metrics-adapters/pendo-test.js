@@ -1,27 +1,27 @@
-import { module, test } from "qunit";
-import { setupTest } from "ember-qunit";
-import sinon from "sinon";
-import Pendo from "ember-metrics-pendo/metrics-adapters/pendo";
+import { module, test } from "qunit"
+import { setupTest } from "ember-qunit"
+import sinon from "sinon"
+import Pendo from "ember-metrics-pendo/metrics-adapters/pendo"
 
-let sandbox, config;
+let sandbox, config
 
 module("Unit | Metrics Adapter | pendo adapter", function(hooks) {
-  setupTest(hooks);
+  setupTest(hooks)
   hooks.beforeEach(function() {
-    sandbox = sinon.createSandbox();
+    sandbox = sinon.createSandbox()
     config = {
       apiKey: "123456789"
-    };
-  });
+    }
+  })
   hooks.afterEach(function() {
-    sandbox.restore();
-  });
+    sandbox.restore()
+  })
 
   test("#identify calls `pendo.initialize()` with the right arguments", function(assert) {
-    let adapter = Pendo.create({ config });
+    let adapter = Pendo.create({ config })
     let stub = sandbox.stub(window.pendo, "initialize").callsFake(() => {
-      return true;
-    });
+      return true
+    })
     adapter.identify({
       visitor: {
         id: 123,
@@ -31,7 +31,7 @@ module("Unit | Metrics Adapter | pendo adapter", function(hooks) {
         id: "def1abc2",
         env: "development"
       }
-    });
+    })
     assert.ok(
       stub.calledWith({
         visitor: {
@@ -44,26 +44,27 @@ module("Unit | Metrics Adapter | pendo adapter", function(hooks) {
         }
       }),
       "it sends the correct arguments"
-    );
-  });
+    )
+  })
+
   test("#trackEvent calls `pendo.track` with the right arguments", function(assert) {
-    let adapter = Pendo.create({ config });
-    window.pendo.track = () => {}; // doesn't have a track method unless it's a real api key etc
+    let adapter = Pendo.create({ config })
+    window.pendo.track = () => {} // doesn't have a track method unless it's a real api key etc
     let stub = sandbox.stub(window.pendo, "track").callsFake(() => {
-      return true;
-    });
+      return true
+    })
     adapter.trackEvent({
       event: 'ClickedThing',
       prop1: 'ThingID',
       prop2: 'ThingValue'
-    });
+    })
     assert.ok(
       stub.calledWith('ClickedThing', {
         prop1: 'ThingID',
         prop2: 'ThingValue'
       }),
       "it sends the correct arguments"
-    );
-  });
+    )
+  })
 
-});
+})
