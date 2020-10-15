@@ -1,1 +1,1 @@
-export { default } from "ember-metrics-pendo/metrics-adapters/pendo";
+export { default } from "ember-metrics-pendo/metrics-adapters/pendo"
