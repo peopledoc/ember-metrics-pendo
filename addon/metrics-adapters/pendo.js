@@ -1,5 +1,6 @@
 import { assign } from "@ember/polyfills"
 import { assert } from "@ember/debug"
+import removeFromDOM from "ember-metrics/utils/remove-from-dom"
 import BaseAdapter from "ember-metrics/metrics-adapters/base"
 
 export default BaseAdapter.extend({
@@ -36,7 +37,7 @@ export default BaseAdapter.extend({
   },
 
   willDestroy() {
-    document.querySelector('script[src*="pendo.js"]').remove()
+    removeFromDOM('script[src*="pendo.js"]')
     delete window.pendo
   }
 })
