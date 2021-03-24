@@ -58,15 +58,25 @@ Be aware the use of Pendo makes sense only once your visitor is identified in yo
 
 #### Service API
 
-There are 2 methods implemented by the Pendo adapter:
+The add-on [`ember-metrics`](https://github.com/poteto/ember-metrics) includes a `metrics` Service, 
+which provides the methods:
 
-- `identify([analyticsName], options)`
+- `identify(analyticsName?: string | string[], analyticsOptions?: {})`
 
   For analytics services that have identification functionality.
 
-- `trackEvent([analyticsName], options)`
+- `trackEvent(analyticsName?: string | string[], analyticsOptions?: {})`
 
   This is a general purpose method for tracking a named event in your application.
+
+
+For both methods: (see [ember-metrics#api](https://github.com/adopted-ember-addons/ember-metrics#api))
+
+- Parameter `analyticsName` is optional and allows you to specifically target analytics Services.
+
+- Parameter `analyticsOptions` is optional and allows you to pass a configuration to the adapter of 
+  the targeted analytics Services.
+
 
 ### Activate Pendo
 
