@@ -3,23 +3,19 @@ import { setupTest } from "ember-qunit"
 import sinon from "sinon"
 import Pendo from "ember-metrics-pendo/metrics-adapters/pendo"
 
-let sandbox, config
+let config
 
 module("Unit | Metrics Adapter | pendo adapter", function(hooks) {
   setupTest(hooks)
   hooks.beforeEach(function() {
-    sandbox = sinon.createSandbox()
     config = {
       apiKey: "123456789"
     }
   })
-  hooks.afterEach(function() {
-    sandbox.restore()
-  })
 
   test("#identify calls `pendo.initialize()` with the right arguments", function(assert) {
     let adapter = Pendo.create({ config })
-    let stub = sandbox.stub(window.pendo, "initialize").callsFake(() => {
+    let stub = sinon.stub(window.pendo, "initialize").callsFake(() => {
       return true
     })
     adapter.identify({
@@ -50,7 +46,7 @@ module("Unit | Metrics Adapter | pendo adapter", function(hooks) {
   test("#trackEvent calls `pendo.track` with the right arguments", function(assert) {
     let adapter = Pendo.create({ config })
     window.pendo.track = () => {} // doesn't have a track method unless it's a real api key etc
-    let stub = sandbox.stub(window.pendo, "track").callsFake(() => {
+    let stub = sinon.stub(window.pendo, "track").callsFake(() => {
       return true
     })
     adapter.trackEvent({
