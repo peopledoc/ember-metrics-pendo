@@ -1,13 +1,13 @@
-import { assign } from "@ember/polyfills"
-import { assert } from "@ember/debug"
-import removeFromDOM from "ember-metrics/utils/remove-from-dom"
-import classic from "ember-classic-decorator"
-import BaseAdapter from "ember-metrics/metrics-adapters/base"
+import { assign } from '@ember/polyfills'
+import { assert } from '@ember/debug'
+import removeFromDOM from 'ember-metrics/utils/remove-from-dom'
+import classic from 'ember-classic-decorator'
+import BaseAdapter from 'ember-metrics/metrics-adapters/base'
 
 @classic
 export default class PendoAdapter extends BaseAdapter {
   toStringExtension() {
-    return "Pendo"
+    return 'Pendo'
   }
 
   init() {
