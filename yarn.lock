@@ -4723,14 +4723,6 @@ ember-auto-import@^1.11.2:
     walk-sync "^0.3.3"
     webpack "^4.43.0"
 
-ember-circleci@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ember-circleci/-/ember-circleci-2.1.0.tgz#06efdca847fe20af10ff961eec5495e361888f4a"
-  integrity sha512-1KE75Hu1qJoo6Oq7Gi1NJXvpGga+5qdCSSiwg93YabU2p8pOaFf6TxR8jUoG/dGQFGr4t2c5ZIcdZgP2aiDuxQ==
-  dependencies:
-    ember-cli-babel "^7.21.0"
-    ember-cli-htmlbars "^5.2.0"
-
 ember-classic-decorator@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ember-classic-decorator/-/ember-classic-decorator-2.0.0.tgz#e781e0811a92524ad177b490f404f513794aee39"
@@ -4824,7 +4816,7 @@ ember-cli-htmlbars-inline-precompile@^2.1.0:
     heimdalljs-logger "^0.1.9"
     silent-error "^1.1.0"
 
-ember-cli-htmlbars@^5.2.0, ember-cli-htmlbars@^5.7.1:
+ember-cli-htmlbars@^5.7.1:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-5.7.1.tgz#eb5b88c7d9083bc27665fb5447a9b7503b32ce4f"
   integrity sha512-9laCgL4tSy48orNoQgQKEHp93MaqAs9ZOl7or5q+8iyGGJHW6sVXIYrVv5/5O9HfV6Ts8/pW1rSoaeKyLUE+oA==
