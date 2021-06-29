@@ -1,7 +1,7 @@
 # ember-metrics-pendo
 
-[![CircleCI](https://circleci.com/gh/peopledoc/ember-metrics-pendo.svg?style=shield&circle-token=f894568aeb359b29b17340bda3b4a12121531ae2)](https://circleci.com/gh/peopledoc/ember-metrics-pendo)
-[![Ember Observer Score](https://emberobserver.com/badges/ember-metrics-pendo.svg)](https://emberobserver.com/addons/ember-metrics-pendo)
+[![CI](https://github.com/peopledoc/ember-metrics-pendo/actions/workflows/ci.yml/badge.svg)](https://github.com/peopledoc/ember-metrics-pendo/actions/workflows/ci.yml) [![Ember Observer Score](https://emberobserver.com/badges/ember-metrics-pendo.svg)](https://emberobserver.com/addons/ember-metrics-pendo)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## About this addon
 
