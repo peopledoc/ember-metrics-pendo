@@ -45,7 +45,6 @@ module("Unit | Metrics Adapter | pendo adapter", function(hooks) {
 
   test("#trackEvent calls `pendo.track` with the right arguments", function(assert) {
     let adapter = Pendo.create({ config })
-    window.pendo.track = () => {} // doesn't have a track method unless it's a real api key etc
     let stub = sinon.stub(window.pendo, "track").callsFake(() => {
       return true
     })
