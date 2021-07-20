@@ -5208,7 +5208,7 @@ ember-source-channel-url@^3.0.0:
   dependencies:
     node-fetch "^2.6.0"
 
-ember-source@~3.27.0:
+ember-source@~3.27.2:
   version "3.27.5"
   resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.27.5.tgz#8e9ce24c17e7a16dc3c2b128d3d3e24ea79e6726"
   integrity sha512-oSGM9mD6BuOcGilYqU+F2MtCferQhKWO3REX1P9qgN1Wzfa5kXjbjBBdPNWfBtg7bZLGM27H8JgiV6+t3uGegA==
