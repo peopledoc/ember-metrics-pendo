@@ -3,6 +3,12 @@
 [![CI](https://github.com/peopledoc/ember-metrics-pendo/actions/workflows/ci.yml/badge.svg)](https://github.com/peopledoc/ember-metrics-pendo/actions/workflows/ci.yml) [![Ember Observer Score](https://emberobserver.com/badges/ember-metrics-pendo.svg)](https://emberobserver.com/addons/ember-metrics-pendo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Deprecation Warning ⚠️
+
+> This add-on has been merged into [`ember-metrics`](https://github.com/adopted-ember-addons/ember-metrics).
+>
+> Please use `ember-metrics` v1.4.0+ instead and remove `ember-metrics-pendo` from your dependencies.
+
 ## About this addon
 
 Ember-metrics-pendo allows to configure the [Pendo](https://www.pendo.io) service in your ember project using [ember-metrics](https://github.com/poteto/ember-metrics).
